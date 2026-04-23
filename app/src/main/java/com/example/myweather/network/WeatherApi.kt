@@ -8,16 +8,15 @@ import retrofit2.http.Query
 
 interface WeatherApi {
 
-    // 必须加上这个，才能在 ViewModel 里调用 searchCity
     @GET("city/lookup")
-    fun searchCity(
+    suspend fun searchCity(
         @Query("location") query: String,
         @Query("key") key: String
-    ): Call<CitySearchResponse>
+    ): CitySearchResponse
 
     @GET("weather/now")
-    fun getNowWeather(
+    suspend fun getNowWeather(
         @Query("location") locationId: String,
         @Query("key") key: String
-    ): Call<NowWeatherResponse>
+    ): NowWeatherResponse
 }
