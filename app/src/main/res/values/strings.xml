@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyWeather</string>
+    <string name="input_city_name">输入城市名称</string>
+    <string name="query_weather">查询天气</string>
+</resources>
